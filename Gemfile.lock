@@ -408,7 +408,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (= 3.1.12)
-  bootstrap-sass (= 3.3.7)
+  bootstrap-sass
   bootstrap-will_paginate (= 1.0.0)
   byebug (= 9.0.6)
   carrierwave (= 1.2.2)
