@@ -108,6 +108,7 @@ development:
 
   # Configure Mongoid specific options. (optional)
   options:
+    raise_not_found_error: false
     # Includes the root model name in json serialization. (default: false)
     # include_root_in_json: false
 
@@ -159,12 +160,15 @@ test:
       hosts:
         - localhost:27017
       options:
+        raise_not_found_error: false
         read:
           mode: :primary
         max_pool_size: 1
         
         
-  production:
+        
+        
+production:
   sessions:
     default:
       database: sample_app_test
