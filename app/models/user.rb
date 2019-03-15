@@ -6,6 +6,7 @@ class User
   field :email, type: String
   field :password_digest, type: String
   field :remember_digest, type: String
+  field :admin, type: Boolean
   
   before_save { self.email = email.downcase }
  
