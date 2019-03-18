@@ -3,7 +3,7 @@ class Micropost
   include Mongoid::Timestamps
   field :content, type: String
   field :user_id, type: String
-  field :picture, type: String
+  mount_uploader :picture, PictureUploader
   
   belongs_to :user
   
@@ -15,11 +15,11 @@ class Micropost
   
   validates :content, presence: true, length: { maximum: 140 }
 
-  validate  :picture_size
+  
   
   private
 
-    # Validates the size of an uploaded picture.
+    #Validates the size of an uploaded picture.
     def picture_size
       if picture.size > 5.megabytes
         errors.add(:picture, "should be less than 5MB")
